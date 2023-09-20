@@ -1,0 +1,142 @@
+.shop {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	min-height: 100%;
+
+	transform: scale(1.01);
+
+	opacity: 0;
+	visibility: hidden;
+
+	transition: all 0.7s ease 0.3s;
+
+	._shop & {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	// .shop__body
+
+	&__body {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 15px;
+
+		width: 100%;
+		min-height: 100vh;
+		height: 100vh;
+
+		padding: 24px 14px;
+
+		overflow-y: auto;
+	}
+
+	&__header {
+	}
+
+	&__items {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 50px 10px;
+		@media (max-height: 760px) {
+			gap: 20px 10px;
+		}
+	}
+
+	// .shop__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		transition: all 0.7s ease 0s;
+	}
+
+	&__image-box {
+		flex: 1 1 auto;
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+	&__image {
+		img {
+			transform: translateY(10px);
+		}
+	}
+
+	&__price-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 10px;
+
+		transition: all 0.7s ease 0s;
+
+		// ._bought & {
+		// 	display: none;
+		// }
+	}
+
+	&__icon {
+		width: 28px;
+		height: 16px;
+
+		background-image: url("@img/icons/coin.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	&__price {
+		color: #000;
+	}
+
+	&__button {
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 103px;
+		height: 33px;
+
+		border-radius: 5.584px;
+		border: 1.861px solid #600500;
+		background: #e1cd0a;
+		box-shadow: 0px 1.86135px 1.86135px 0px rgba(255, 255, 255, 0.25) inset,
+			0px -2.32668px 1.86135px 0px rgba(0, 0, 0, 0.25) inset;
+
+		color: #000;
+		font-size: 14px;
+		font-style: italic;
+		font-weight: 800;
+		line-height: normal;
+
+		transition: all 0.3s ease 0s;
+
+		._selected & {
+			background: #96e10a;
+		}
+		&._hold {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+	}
+}

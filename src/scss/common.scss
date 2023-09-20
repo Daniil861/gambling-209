@@ -1,0 +1,96 @@
+.button {
+	position: relative;
+	z-index: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 246.573px;
+	height: 79px;
+
+	border-radius: 13.313px;
+	border: 4.438px solid #600500;
+	background: #e1cd0a;
+	box-shadow: 0px 4.4375px 4.4375px 0px rgba(255, 255, 255, 0.25) inset,
+		0px -5.54688px 4.4375px 0px rgba(0, 0, 0, 0.25) inset;
+
+	user-select: none;
+
+	&[data-button="privacy"] {
+		height: 45px;
+		border-radius: 11px;
+		border: 2px solid #a3a3a3;
+		background: linear-gradient(180deg, #575757 0%, #303030 100%);
+	}
+}
+
+.button-home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 88px;
+	height: 53px;
+
+	border-radius: 9px;
+	background: url("@img/icons/arrow-left.svg") center / 50% no-repeat #161615;
+}
+
+.button-privacy {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 246px;
+	height: 48px;
+
+	border-radius: 9px;
+	background: #161615;
+
+	font-size: 20px;
+	line-height: 1;
+	color: #fff;
+	font-family: "Georama";
+}
+
+[type="button"] {
+	transition: all 0.3s ease 0s;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	&:active {
+		transform: translateY(3px);
+	}
+}
+
+//========================================================================================================================================================
+
+//========================================================================================================================================================
+
+.score {
+	white-space: nowrap;
+	&._no-money {
+		animation: no-money 0.7s ease 2;
+	}
+	&._delete-money {
+		animation: delete-money 0.7s ease;
+	}
+	&._anim-add-money {
+		animation: add-money 0.5s ease 3;
+	}
+}
+
+.icon-game {
+	&._anim-icon-jump {
+		animation: jump_icon 5s ease;
+	}
+	&._anim-icon-scale {
+		animation: scale_icon 0.5s ease 2;
+	}
+	&._anim-icon-rotate {
+		animation: rotate_icon 1.5s ease-out 1;
+	}
+	&._anim-icon-rotate-2 {
+		animation: rotate_icon-2 1.5s ease 1;
+	}
+}
+//========================================================================================================================================================

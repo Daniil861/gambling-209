@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Gambling-209"
+})
+
+<body>
+	<div class="wrapper">
+		<div class="wrapper__body">
+			<div class="wrapper__main main">
+				<div class="main__body">
+					<div class="main__score-box">
+						<div class="main__score score">0</div>
+						<span>km</span>
+					</div>
+					<div class="main__buttons-box">
+						<div class="main__buttons">
+							<button type="button" data-button="game"
+								class="main__button button _fz-38 _italic"><span>Start</span></button>
+							<button type="button" data-button="shop" class="main__button button _fz-38 _italic"><span>My
+									zoombie</span></button>
+						</div>
+
+						<button type="button" data-button="privacy" class="main__button button-privacy"><span>Privacy
+								Policy</span></button>
+					</div>
+					<div class="main__hero">
+						<img src="@img/other/hero.png" alt="Image">
+					</div>
+				</div>
+			</div>
+
+			<div class="wrapper__game game">
+				<div class="game__body">
+					<div class="game__cap"></div>
+					<div class="game__header header">
+						<div class="header__body">
+							<button type="button" data-button="game-home" class="header__button button-home"></button>
+							<div class="header__score-box">
+								<div class="header__score score">0</div>
+								<span>km</span>
+							</div>
+							<div data-path class="header__path"><span>0</span>km </div>
+						</div>
+					</div>
+					<div class="game__field field">
+						<div class="field__body">
+							<div class="field__hero"><img src="@img/shop/shop-1.png" alt="Image"></div>
+						</div>
+					</div>
+					<div class="game__footer footer-game">
+						<div class="footer-game__body">
+							<div class="footer-game__controls">
+								<button type="button" data-button="move-down" class="footer-game__button"></button>
+								<button type="button" data-button="move-up" class="footer-game__button"></button>
+							</div>
+							<button type="button" data-button="pause" class="footer-game__button-pause"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			@@include('html/_shop.htm', {})
+
+
+			@@include('html/_final.htm',{})
+
+
+		</div>
+	</div>
+
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
